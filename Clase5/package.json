@@ -1,0 +1,12 @@
+{
+  "name": "clase5",
+  "version": "1.0.0",
+  "main": "datopromises.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "carlos apolaya",
+  "license": "ISC",
+  "description": ""
+}
