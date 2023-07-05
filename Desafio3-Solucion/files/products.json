@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "title": "product1",
+      "description": "description1",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc123",
+      "stock": 500
+    },
+    {
+      "id": 2,
+      "title": "product1",
+      "description": "description1",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc124",
+      "stock": 500
+    },
+    {
+      "id": 3,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc128",
+      "stock": 500
+    },
+    {
+      "id": 4,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc128f",
+      "stock": 500
+    },
+    {
+      "id": 5,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc12df8",
+      "stock": 500
+    },
+    {
+      "id": 6,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc1dd28",
+      "stock": 500
+    },
+    {
+      "id": 7,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc12sdasda8",
+      "stock": 500
+    },
+    {
+      "id": 8,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abc1asd33328",
+      "stock": 500
+    },
+    {
+      "id": 9,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abasdasd128",
+      "stock": 500
+    },
+    {
+      "id": 10,
+      "title": "zzzzz",
+      "description": "xxxxxx",
+      "price": 1500,
+      "thumbnail": "url",
+      "code": "abcdddd128",
+      "stock": 500
+    }
+  ]
