@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "title": "product1",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc123",
+    "stock": 500
+  },
+  {
+    "id": 2,
+    "title": "product1",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc124",
+    "stock": 500
+  },
+  {
+    "id": 3,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc128",
+    "stock": 500
+  },
+  {
+    "id": 4,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc128f",
+    "stock": 500
+  },
+  {
+    "id": 5,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc12df8",
+    "stock": 500
+  },
+  {
+    "id": 6,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc1dd28",
+    "stock": 500
+  },
+  {
+    "id": 7,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc12sdasda8",
+    "stock": 500
+  },
+  {
+    "id": 8,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abc1asd33328",
+    "stock": 500
+  },
+  {
+    "id": 9,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abasdasd128",
+    "stock": 500
+  },
+  {
+    "id": 10,
+    "title": "zzzzz",
+    "description": "xxxxxx",
+    "price": 1500,
+    "thumbnail": "url",
+    "code": "abcdddd128",
+    "stock": 500
+  },
+  {
+    "id": 12,
+    "title": "newproductossss12",
+    "description": "dessscriptionnew12",
+    "price": 330,
+    "thumbnail": "url",
+    "code": "codenw2222q",
+    "stock": 20
+  },
+  {
+    "id": 13,
+    "title": "cacas13",
+    "description": "caca13",
+    "price": 330,
+    "thumbnail": "urlsdd",
+    "code": "caca13ss",
+    "stock": 20,
+    "category": "caca",
+    "status": true
+  },
+  {
+    "id": 14,
+    "title": "xcxc",
+    "description": "xcxc",
+    "price": 330,
+    "category": "tecno",
+    "thumbnail": "url",
+    "code": "xcxctr",
+    "stock": 20
+  },
+  {
+    "id": 15,
+    "title": "caca",
+    "description": "caca",
+    "price": 330,
+    "category": "caca",
+    "status": false,
+    "thumbnail": "urlsdd",
+    "code": "caca",
+    "stock": 20
+  }
+]
