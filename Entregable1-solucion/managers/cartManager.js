@@ -1,6 +1,4 @@
 import fs from "fs"
-import ProductManager from "./productManager.js"
-const productmanager=new ProductManager("__dirname+'/files/products.json'")
 
 export default class CartManager{
     constructor(path){

@@ -6,7 +6,7 @@ const app=express();
 const PORT=8080;
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(express.Router())
+//rutas
 app.use("/api",productRouter)
 app.use("/api",cartRouter)
 

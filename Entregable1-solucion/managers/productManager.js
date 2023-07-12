@@ -106,7 +106,7 @@ export default class ProductManager {
   updateProduct = async (id,obj) => {
     const {pid}=id
     const {title, description, price, category,thumbnail, status,code, stock}=obj
-    if (title === undefined || description === undefined || price === undefined || category === undefined || status === undefined || code === undefined || stock === undefined) {
+         if(title===undefined || description===undefined || price===undefined || category===undefined || status===undefined || code===undefined||stock===undefined){
       console.error("INGRESE TODOS LOS DATOS DEL PRODUCTO PARA SU ACTUALIZACION");
       return;
     } else {

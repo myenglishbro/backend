@@ -4,39 +4,47 @@ export default class UsersManager{
         this.path=path
     }
 
-    getUsers=async()=>{
-      try{
-        if(fs.existsSync(this.path)){
-            const usersFiles=await fs.promises.readFile(this.path,"utf-8")
-            const usersJs=JSON.parse(usersFiles)
-            return usersJs
+    getProducts = async (info) => {
+
+      try {
+        const { limit } = info; // Asigna un objeto vacío como valor predeterminado si info es undefined
+  
+        if (fs.existsSync(this.path)) {
+        
+          const productlist = await fs.promises.readFile(this.path, "utf-8");
+          const productlistJs = JSON.parse(productlist);
+          if (limit) {
+            const limitProducts = productlistJs.slice(0, parseInt(limit));
+            return limitProducts;
+          } else {
+            return productlistJs;
+          }
+        } else {
+          return [];
         }
-        else{
-        return []
-        }
+      } catch (error) {
+        throw new Error(error);
       }
-      catch(error){
-        throw new Error(error)
+    };
+  
+    getProductbyId = async (id) => {
+      try {
+        const {pid} = id;
+        if (fs.existsSync(this.path)) {
+          const allproducts = await this.getProducts();
+          const found = allproducts.find((element) => element.id === parseInt(pid));
+          if (found) {
+            return found;
+          } else {
+            throw new Error("Producto no existe");
+          }
+        } else {
+          throw new Error("Product file not found");
+        }
+      } catch (error) {
+        throw new Error(error);
       }
-    }
-
-    getUsersbyId=async(id)=>{
-    try{
-        const users=await this.getUsers()
-        const user=users.find(element=>element.id===id)
-        if(user){
-           return user
-        }
-        else{
-            throw new Error("Usuario no existe")
-        }
-    }
-    catch(error){
-        throw new Error(error)
-
-    }
-
-    }
+    };
 
     idGenerator = async () => {
         try {

@@ -1,0 +1,13 @@
+<h3>SOCKET CLIENTE</h3>
+<form id="formulario">
+Nombre: <input type="text" name="nombre" id="nombre">
+Mensaje:<input type="text" name="mensaje" id="mensaje">
+<input type="submit" value="Enviar"></input>
+</form>
+<p id="parrafoMensajes"></p>
+{{!-- {{el scrip necesario para poder usar websocket en el cliente}} --}}
+
+<script src="/socket.io/socket.io.js"></script>
+{{!-- {{todo lo que sucdera del lado delclietne}} --}}
+
+<script src="js/index.js"></script>
