@@ -1,0 +1,110 @@
+[
+  {
+    "id": 6,
+    "title": "Producto2",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "abc1dd28",
+    "stock": 500
+  },
+  {
+    "id": 7,
+    "title": "product3",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "abc12sdasda8",
+    "stock": 500
+  },
+  {
+    "id": 8,
+    "title": "product4",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "abc1asd33328",
+    "stock": 500
+  },
+  {
+    "id": 9,
+    "title": "product5",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "abasdasd128",
+    "stock": 500
+  },
+  {
+    "id": 10,
+    "title": "product6",
+    "description": "description1",
+    "price": 1500,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "abcdddd128",
+    "stock": 500
+  },
+  {
+    "id": 12,
+    "title": "newproductossss7",
+    "description": "dessscriptionnew12",
+    "price": 330,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "codenw2222q",
+    "stock": 20
+  },
+  {
+    "id": 13,
+    "title": "produt9",
+    "description": "caca13",
+    "price": 330,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "caca13ss",
+    "stock": 20,
+    "category": "caca",
+    "status": true
+  },
+  {
+    "id": 14,
+    "title": "producto10",
+    "description": "xcxc",
+    "price": 330,
+    "category": "tecno",
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "xcxctr",
+    "stock": 20
+  },
+  {
+    "id": 16,
+    "title": "porducto12",
+    "description": "descripcion12",
+    "price": "1222",
+    "category": "zapatillas",
+    "status": true,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "code": "casd",
+    "stock": "1222"
+  },
+  {
+    "id": 17,
+    "title": "tutorial",
+    "description": "xxxx",
+    "price": 330,
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "category": "sport",
+    "status": true,
+    "code": "x123ss",
+    "stock": 30
+  },
+  {
+    "id": 18,
+    "title": "examen",
+    "description": "sad",
+    "price": "12",
+    "thumbnail": "https://i.ibb.co/4fY5bvZ/z4.png",
+    "category": "1as",
+    "status": true,
+    "code": "saddvdvd",
+    "stock": "12"
+  }
+]
