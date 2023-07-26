@@ -39,6 +39,12 @@ const socketServer= new Server(httpServer)
 import ProductManager from "./dao/mongomanagers/productManagerMongo.js"
 const pmanagersocket=new ProductManager()
 
+// Importar MessagesManager
+import MessagesManager from "./dao/mongomanagers/messageManagerMongo.js";
+const messagesManager = new MessagesManager();
+
+
+
 socketServer.on("connection",async(socket)=>{
     console.log("client connected con ID:",socket.id)
      const listadeproductos=await pmanagersocket.getProducts()
@@ -56,5 +62,23 @@ socketServer.on("connection",async(socket)=>{
         const listadeproductos=await pmanagersocket.getProducts({})
         socketServer.emit("enviodeproducts",listadeproductos)
         })
+
+
+
+        socket.on("nuevousuario",(usuario)=>{
+            console.log("usuario" ,usuario)
+            socket.broadcast.emit("broadcast",usuario)
+           })
+           socket.on("disconnect",()=>{
+               console.log(`Usuario con ID : ${socket.id} esta desconectado `)
+           })
+       
+           socket.on("mensaje", async (info) => {
+            // Guardar el mensaje utilizando el MessagesManager
+            console.log(info)
+            await messagesManager.createMessage(info);
+            // Emitir el mensaje a todos los clientes conectados
+            socketServer.emit("chat", await messagesManager.getMessages());
+          });
     
 })

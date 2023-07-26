@@ -1,0 +1,54 @@
+
+[Uso del updateOne:  ]
+se utiliza para actualizar un único documento que cumpla con los criterios de búsqueda
+
+
+
+[Uso del operador $inc: ]
+El operador $inc se utiliza para incrementar el valor de un campo numérico en un documento de MongoDB. 
+La sintaxis del operador $inc es la siguiente:
+{ $inc: { field: value } }
+--------------------------------------
+{
+  "_id": "cart1",
+  "products": [
+    { "_id": "product1", "quantity": 5 },
+    { "_id": "product2", "quantity": 10 }
+  ]
+}
+
+const cid = "cart1";
+const productId = "product1";
+const quantityIncrement = 3;
+
+const filter = { _id: cid, "products._id": productId };
+const update = { $inc: { "products.$.quantity": quantityIncrement } };
+
+const result = await cartModel.updateOne(filter, update);
+
+console.log(result);
+
+{
+  "_id": "cart1",
+  "products": [
+    { "_id": "product1", "quantity": 5 },
+    { "_id": "product2", "quantity": 10 }
+  ]
+}
+const update = { $inc: { "products.$.quantity": 3 } };
+{
+  "_id": "cart1",
+  "products": [
+    { "_id": "product1", "quantity": 8 }, // La cantidad se incrementa en 3 unidades (5 + 3)
+    { "_id": "product2", "quantity": 10 }
+  ]
+}
+const update = { $inc: { "products.quantity": 3 } };
+{
+  "_id": "cart1",
+  "products": [
+    { "_id": "product1", "quantity": 5 }, // El campo "quantity" de product1 no cambia (5)
+    { "_id": "product2", "quantity": 13 } // El campo "quantity" de product2 se incrementa en 3 unidades (10 + 3)
+  ]
+}
+
