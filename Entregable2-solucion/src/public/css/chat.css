@@ -1,0 +1,70 @@
+/* Global styles */
+
+  /* Chat container styles */
+  #chat-container {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Chat messages styles */
+  #chat-messages {
+    height: 700px;
+    overflow-y: scroll;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Individual message styles */
+  .message {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .message.sender {
+    background-color: #dff0d8;
+  }
+  
+  /* Apply background color to even child elements */
+  .message.sender:nth-child(even) {
+    background-color: #c1e4d6;
+  }
+  
+  /* Message sender's name styles */
+  .message .sender-name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  /* Message input area styles */
+  #formulario {
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  #mensaje {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  
+  /* Submit button styles */
+  #formulario input[type="submit"] {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #formulario input[type="submit"]:hover {
+    background-color: #0056b3;
+  }

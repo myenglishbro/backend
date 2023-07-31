@@ -1,0 +1,21 @@
+ <div id="chat-container">
+    <h4 id="nombreusuario">Username</h4>
+    <div id="chat-messages">
+      <!-- Placeholder for incoming and outgoing messages -->
+      <div class="message sender">
+         <p id="chat"> </p>
+      </div>
+     
+    </div>
+    <form id="formulario">
+      <input type="text" name="mensaje" id="mensaje" placeholder="Type your message...">
+      <input type="submit" value="Enviar">
+    </form>
+   
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>

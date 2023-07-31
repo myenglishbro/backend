@@ -1,0 +1,77 @@
+El operador $addToSet se utiliza en las operaciones de agregación de MongoDB 
+para acumular valores únicos en un array.
+ A diferencia del operador $push, que simplemente agrega un elemento al array
+ sin verificar duplicados, 
+ $addToSet garantiza que los elementos sean únicos en el array resultante.
+  Si el valor ya está presente en el array, no se agrega nuevamente.
+
+Ejemplo 1:
+Supongamos que tenemos una colección de usuarios y queremos obtener una lista única de 
+todos los roles que existen en la colección.
+
+Documentos en la colección de usuarios:
+[
+  { "_id": 1, "name": "Alice", "role": "Admin" },
+  { "_id": 2, "name": "Bob", "role": "User" },
+  { "_id": 3, "name": "Charlie", "role": "Admin" },
+  { "_id": 4, "name": "David", "role": "Moderator" },
+  { "_id": 5, "name": "Eve", "role": "User" }
+]
+Consulta de agregación para obtener los roles únicos:
+
+db.users.aggregate([
+  {
+    $group: {
+      _id: null,
+      roles: { $addToSet: "$role" }
+    }
+  }
+]);
+
+output:
+[
+  { "_id": null, "roles": ["Admin", "User", "Moderator"] }
+]
+
+
+el _id: null dentro del operador $group indica que queremos agrupar todos los documentos 
+de la colección en un solo grupo. 
+Al utilizar _id: null, estamos indicando que no queremos
+ realizar una agrupación basada en un campo específico,
+  sino que queremos obtener el resultado de la operación de agregación considerando
+todos los documentos como un solo grupo.
+
+Voy a explicar en detalle lo que sucede con la consulta de agregación:
+
+$group: { _id: null, roles: { $addToSet: "$role" } }: Esta etapa de agregación realiza 
+un agrupamiento de todos los documentos de la colección en un único grupo (_id: null).
+ Dentro de este grupo único, se utiliza $addToSet: "$role" para acumular todos los valores únicos 
+ del campo role en un array llamado roles.
+
+Al no especificar un campo específico para agrupar (como _id: "$role"),
+ MongoDB agrupa todos los documentos en un solo grupo, 
+ considerando todos los valores del campo role de todos los documentos para formar el array roles.
+
+El resultado final será un único documento con el array roles, 
+que contendrá todos los valores únicos de role de todos los documentos de la colección.
+ Dado que _id: null, el resultado no tendrá ningún valor específico en el campo _id, y simplemente estará representado
+  por un documento con el array roles.
+
+Si quisieras realizar una agrupación basada en un campo específico, 
+debes usar ese campo como valor de _id en la etapa $group. Por ejemplo, 
+si quisieras agrupar los documentos por el campo role, podrías hacerlo de la siguiente manera:
+
+db.users.aggregate([
+  {
+    $group: {
+      _id: "$role",
+      count: { $sum: 1 }
+    }
+  }
+]);
+En este caso, se crearían grupos separados para cada valor único del campo role, 
+y se contaría la cantidad de documentos que pertenecen a cada grupo utilizando la operación $sum.
+
+
+
+
