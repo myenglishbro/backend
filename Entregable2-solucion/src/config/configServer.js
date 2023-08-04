@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const URI="mongodb+srv://carlosapolayasanchez:myenglishbro@cluster0.cbayzpv.mongodb.net/ecommerce?retryWrites=true&w=majority"
+const URI="mongodb+srv://carlosapolayasanchez:ensolver@cluster0.cbayzpv.mongodb.net/ecommerce?retryWrites=true&w=majority"
  
 
 const connectToDB = () => {

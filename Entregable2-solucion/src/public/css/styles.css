@@ -4,15 +4,15 @@
     --dark: #2B2B2B;
 }
 body{
-   
+   height: 100vh;
     font-family: system-ui;
-    background-image: linear-gradient(to top right, var(--green), var(--violet));
 }
 #contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  
 }
 .card{
   

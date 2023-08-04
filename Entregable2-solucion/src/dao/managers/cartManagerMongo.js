@@ -63,8 +63,26 @@ class CartManager {
             return err;
         }
     };
-    
-    
+    deleteProductInCart = async (cid, products) => {
+        try {
+            return await cartModel.findOneAndUpdate(
+                { _id: cid },
+                { products },
+                { new: true })
+
+        } catch (err) {
+            return err
+        }
+
+    }
+    updateOneProduct = async (cid, products) => {
+        
+        await cartModel.updateOne(
+            { _id: cid },
+            {products})
+        return await cartModel.findOne({ _id: cid })
+    }
+
 
 
 };

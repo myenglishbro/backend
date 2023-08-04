@@ -6,7 +6,7 @@ const routerV = Router()
 
 
 routerV.get("/",async(req,res)=>{
-    const listadeproductos=await pm.getProducts()
+    const listadeproductos=await pm.getProductsView()
     res.render("home",{listadeproductos})
 })
 
@@ -17,6 +17,7 @@ res.render("realtimeproducts")
 routerV.get("/chat",(req,res)=>{
 res.render("chat")
 })
+
 
 
 export default routerV

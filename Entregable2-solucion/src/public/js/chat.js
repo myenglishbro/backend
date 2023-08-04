@@ -27,6 +27,7 @@ if(!usuario){
     })
 }
 
+
 formulario.onsubmit=(e)=>{
     e.preventDefault()
     const info={
@@ -39,13 +40,14 @@ formulario.onsubmit=(e)=>{
 
 }
 
- socketClient.on("chat",mensaje=>{
-   const chatrender=mensaje.map(e=>{
-    return `<p><strong>${e.user}</strong>${e.message}`}).join(" ")
-   chat.innerHTML=chatrender
-   
-   
- })
+socketClient.on("chat", mensaje => {
+    const chatRender = mensaje.map(e => {
+        const formattedTime = new Date(e.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        return `<p><strong>${e.user}</strong> (${formattedTime}): ${e.message}</p>`;
+    }).join("");
+    chat.innerHTML = chatRender;
+});
+
 
  socketClient.on("broadcast",usuario=>{
     Toastify({
@@ -57,3 +59,12 @@ formulario.onsubmit=(e)=>{
           }
     }).showToast()
  })
+
+ // Manejo del clic en el botón "Vaciar Chat"
+document.getElementById("clearChat").addEventListener("click", () => {
+    // Borrar el contenido del chat en el cliente
+    document.getElementById("chat").textContent = "";
+    
+    // Emitir el evento "clearchat" al servidor usando socketClient
+    socketClient.emit("clearchat");
+});

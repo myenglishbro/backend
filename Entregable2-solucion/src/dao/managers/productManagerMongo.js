@@ -22,10 +22,18 @@ export default class ProductManager{
 
     }
 
+    getProductsView = async () => {
+        try {
+            return await productsModel.find().lean();
+
+        } catch (err) {
+            return err
+        }
+    };
 
     getProducts = async (filter, options) => {
         try {
-            // return await productsModel.find().lean();
+            //  return await productsModel.find().lean();
             return await productsModel.paginate(filter, options);
         } catch (err) {
             return err
